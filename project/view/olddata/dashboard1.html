@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script  src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+    $(document).ready(function(){
+     $("#main1").hide();
+     $("#main2").hide();
+     $("#show2").click(function(){
+     $("#main").hide();
+     $("#main2").hide();
+     $("#main1").show();
+    
+    });
+    $("#show3").click(function(){
+     $("#main1").hide();
+     $("#main2").show();
+     $("#main").hide();
+    
+    });
+   
+    });
+  </script>
+<style>
+  table {
+    border-collapse: collapse;
+    width: 100%;
+   }
+
+   th, td {
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+   }
+</style>   
+</head>
+<body>
+<section class="vh-100"  >
+  <div class="container-fluid bg-dark h=100 ">
+   <nav class="navbar navbar-inverse">
+    <div class="navbar-header">
+      <a class="navbar-brand"></a>
+      </div>
+       <center><h1 class="text-white">Attendence Management System</h1></center>
+       <ul class="nav navbar-nav navbar-right">
+       <li><a href="main.php"> Log out</a></li>
+       </ul>
+       </nav>
+       </div>
+    <div id="box" class="container-fluid  h-100">
+      <div class="row h-100">
+       <div class="col-sm-3 col-md-3 col-lg-4 h=100 ">
+        <br><br><br><br><br><br><br><br><br>  
+         
+        <button id="show2" type="button" class="btn btn-dark btn-sm btn-block">Update Attendence</button><br><br>
+         
+        <button  id="show3" type="button" class="btn btn-dark btn-sm btn-block">Genarate Self Report</button><br>
+        </div>
+        <div  class="col-sm-9 col-md-9 col-lg-8   h=100 "style="background-color: #508bfc;">
+         <center> <h2>Welcome User</h2></center>
+         <div id="main">
+         <br><br><br><br><br><br><br>
+         <center> 
+
+            <form action="." method="POST">
+             <table>
+            <th><td> <input type="radio" id="h" value="h" name="col">
+            <label>Present</label></td></th>
+            <th><td><input type="radio" id="c" value="c" name="col">
+            <label>Absent</label></td></th>
+            <th><td><input type="radio" id="j" value="j" name="col">
+            <label>Leave</label></td></th><br><br>
+            <th><td><input type="submit" value="Submit" class="btn btn-dark"></td></th>
+            </table>
+          </form>
+           </center>
+        </div>
+
+        <div id="main1">
+          <br><br><br><br><br><br><br>
+          <center> 
+             <p>You can only update last record</p>
+             <form action="." method="POST">
+              <table>
+             <th><td> <input type="radio" id="h" value="h" name="col">
+             <label>Present</label></td></th>
+             <th><td><input type="radio" id="c" value="c" name="col">
+             <label>Absent</label></td></th>
+             <th><td><input type="radio" id="j" value="j" name="col">
+             <label>Leave</label></td></th><br><br>
+             <th><td><input type="submit" value="Submit" class="btn btn-dark"></td></th>
+             </table>
+           </form>
+            </center>
+         </div>
+
+          <div id="main2">
+            <br><br><br><br><br><br><br>
+            <center>
+              <p>NO Report genarated yet</p>
+            </center>
+          </div>
+          
+        </div>
+      </div>
+   </div>
+      <div class="container-fluid bg-dark h=100">
+      <footer>
+       <center><h5 class="text-white">© 2021 sajid Khan. All rights reserved</h5></center>
+      </footer>
+      </div>
+ </section>
+  
+</body>
+</html>
